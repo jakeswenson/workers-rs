@@ -153,6 +153,13 @@ impl Response {
         self
     }
 
+    /// Set this response's `Headers`.
+    pub fn with_status(mut self, code: u16) -> Self {
+        self.status_code = code;
+        self
+    }
+
+
     /// Read the `Headers` on this response.
     pub fn headers(&self) -> &Headers {
         &self.headers
